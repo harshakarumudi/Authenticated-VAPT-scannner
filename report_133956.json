@@ -1,0 +1,46 @@
+{
+    "idor": [
+        {
+            "object": "wiener",
+            "status": 200,
+            "result": "No vulnerability",
+            "severity": "low"
+        },
+        {
+            "object": "carlos",
+            "status": 302,
+            "result": "Potential IDOR",
+            "severity": "medium"
+        },
+        {
+            "object": "administrator",
+            "status": 302,
+            "result": "Potential IDOR",
+            "severity": "medium"
+        }
+    ],
+    "privilege": [
+        {
+            "endpoint": "/admin",
+            "status": 404,
+            "result": "Access Controlled",
+            "severity": "low"
+        },
+        {
+            "endpoint": "/admin/deleteUser",
+            "status": 404,
+            "result": "Access Controlled",
+            "severity": "low"
+        },
+        {
+            "endpoint": "/admin/settings",
+            "status": 404,
+            "result": "Access Controlled",
+            "severity": "low"
+        }
+    ],
+    "frameworks": {
+        "OWASP": "A01: Broken Access Control",
+        "MITRE": "T1068: Privilege Escalation"
+    }
+}
